@@ -10,10 +10,10 @@ namespace BookStore.Api.Applications.AuthorOperations.Queries.GetAuthorById
 {
     public class GetAuthorByIdQuery
     {
-        private readonly Context _dbContext;
+        private readonly IBookStoreDbContext _dbContext;
         private readonly IMapper _mapper;
         public int AuthorId;
-        public GetAuthorByIdQuery(Context dbContext, IMapper mapper)
+        public GetAuthorByIdQuery(IBookStoreDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;

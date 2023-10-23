@@ -4,9 +4,9 @@ namespace BookStore.Api.Applications.BookOperations.Commands.DeleteBook
 {
     public class DeleteBookCommand
     {
-        private readonly Context _dbContext;
+        private readonly IBookStoreDbContext _dbContext;
         public int BookId;
-        public DeleteBookCommand(Context dbContext)
+        public DeleteBookCommand(IBookStoreDbContext dbContext)
         {
             _dbContext = dbContext;
         }

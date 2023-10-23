@@ -7,9 +7,9 @@ namespace BookStore.Api.Applications.AuthorOperations.Commands.CreateAuthor
     public class CreateAuthorCommand
     {
         public CreateAuthorModel Model { get; set; }
-        private readonly Context _dbContext;
+        private readonly IBookStoreDbContext _dbContext;
         private readonly IMapper _mapper;
-        public CreateAuthorCommand(Context dbContext, IMapper mapper)
+        public CreateAuthorCommand(IBookStoreDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;

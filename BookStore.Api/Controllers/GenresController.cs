@@ -15,10 +15,10 @@ namespace BookStore.Api.Controllers
     [ApiController]
     public class GenresController : ControllerBase
     {
-        private readonly Context _dbContext;
+        private readonly IBookStoreDbContext _dbContext;
         private readonly IMapper _mapper;
 
-        public GenresController(Context dbContext, IMapper mapper)
+        public GenresController(IBookStoreDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;

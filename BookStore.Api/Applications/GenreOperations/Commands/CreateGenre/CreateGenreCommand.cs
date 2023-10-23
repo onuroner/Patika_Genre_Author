@@ -7,9 +7,9 @@ namespace BookStore.Api.Applications.GenreOperations.Commands.CreateGenre
     public class CreateGenreCommand
     {
         public CreateGenreModel Model { get; set; }
-        private readonly Context _dbContext;
+        private readonly IBookStoreDbContext _dbContext;
         private readonly IMapper _mapper;
-        public CreateGenreCommand(Context dbContext, IMapper mapper)
+        public CreateGenreCommand(IBookStoreDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;

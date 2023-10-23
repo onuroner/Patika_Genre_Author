@@ -19,6 +19,7 @@ namespace BookStore.Api
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddSingleton<ILoggerService, ConsoleLogger>();
+            builder.Services.AddScoped<IBookStoreDbContext>(provider => provider.GetService<Context>());
             builder.Services.AddDbContext<Context>(options => options.UseInMemoryDatabase(databaseName:"BookStoreDB"));
             builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

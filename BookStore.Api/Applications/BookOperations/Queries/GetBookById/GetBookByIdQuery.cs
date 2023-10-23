@@ -7,10 +7,10 @@ namespace BookStore.Api.Applications.BookOperations.Queries.GetBookById
 {
     public class GetBookByIdQuery
     {
-        private readonly Context _dbContext;
+        private readonly IBookStoreDbContext _dbContext;
         private readonly IMapper _mapper;
         public int BookId;
-        public GetBookByIdQuery(Context dbContext, IMapper mapper)
+        public GetBookByIdQuery(IBookStoreDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;
